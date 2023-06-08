@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar--list">
+                        <li class="header__navbar--items has--qr separate">Vào cửa hàng trên ứng dụng F8-shop
+                            <div class="qr">
+                               <img class="qr__img" src="/assets/img/qr_code.png">
+                            <div class="qr__app">
+                                <a class="qr__link"> <img class="qr__download--img" src="/assets/img/google_play.png" alt="Google Play"></a>
+                                <a class="qr__link"><img class="qr__download--img" src="/assets/img/app_store.png" alt="App Store"></a>
+                                 
+                            </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar--items">
+                            <span class="no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar--icons--link"><i class="header__navbar--icons fa-brands fa-facebook"></i></a>
+                            <a href="" class="header__navbar--icons--link"><i class="header__navbar--icons fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar--list">
+                        <li class="header__navbar--items has--notify"><a class="link">
+                            <i class="header__navbar--icons fa-solid fa-bell"></i>
+                            Thông báo</a>
+                        <div class="header__notify">
+                           <header class="header__notify--header">
+                               <h3>Thông báo mới nhận</h3>
+                           </header>
+                           <ul class="header__notify--list">
+                               <li class="header__notify--items header__notify--items--viewed">
+                                   <a class="header__notify--link">
+                                       <img class="header__notify--img" src="/assets/img/imgnotify.jpg_.webp">
+                                       <div class="header__notify--infor">
+                                           <span class="header__notify--name">Mỹ phẩm Ohui chính hãng</span>
+                                           <p class="header__notify--descri">Hidden tag là giải pháp xác thực chính hãng bằng công nghệ tiên tiến</p>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li class="header__notify--items">
+                                <a class="header__notify--link">
+                                    <img class="header__notify--img" src="/assets/img/imgnotify2.jpg_.webp">
+                                    <div class="header__notify--infor">
+                                        <span class="header__notify--name">Sale sốc bộ dưỡng Ohui The Frist tái tạo trẻ hóa ra SALE OFF 70%</span>
+                                        <p class="header__notify--descri">Giá chỉ còn 350.000đ ( giá cũ 1250000 )</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="header__notify--items">
+                                <a class="header__notify--link">
+                                    <img class="header__notify--img" src="/assets/img/imgnotify3.jpg_.webp">
+                                    <div class="header__notify--infor">
+                                        <span class="header__notify--name">Ohui chính thức ra mắt dòng son lỳ The Frist Geniture Lipstick</span>
+                                        <p class="header__notify--descri">Một làn môi căng mềm, quyến rũ với sắc màu nổi bật luôn là điều các quý cô ao ước</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                           </ul>
+                           <div class="header--notify-footer">
+                               <a class="header--notify-footer--btn">Xem tất cả</a>
+                           </div>
+                        </div>
+                        </li>
+                        <li class="header__navbar--items"><a class="link">
+                            <i class="header__navbar--icons fa-solid fa-handshake-angle"></i>
+                            Trợ giúp</a></li>
+                            <!--
+                        <li class="header__navbar--items strong separate">Đăng kí</li>
+                        <li class="header__navbar--items strong">Đăng nhập</li>-->
+                     <li class="header__navbar--items header__navbar-user">
+                         <img class="header__navbar-user-avt" src="/assets/img/login.jfif">
+                         <span class="header__navbar-user-name">Ngọc Đặng</span>
+                         <ul class="header__navbar-user-menu">
+                           <li class="header__navbar-user-items">
+                               <a href="">Tài khoản của tôi</a>
+                           </li>
+                           <li class="header__navbar-user-items">
+                            <a href="">Địa chỉ của tôi</a>
+                        </li>
+                        <li class="header__navbar-user-items">
+                            <a href="">Đơn mua</a>
+                        </li>
+                        <li class="header__navbar-user-items header__navbar-user-items-separate">
+                            <a href="">Đăng xuất</a>
+                        </li>
+                         </ul>
+                     </li>
+
+                    </ul>
+                </nav>
+<!--Header with search-->
+                <div class="header_with-search">
+                    <a href=".">
+                        <div class="header__logo">
+                            <img class="header__logo-img" src="/assets/img/shopee_logo.webp">
+                        </div>
+                    </a>
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                          <div class="header__search-history">
+                              <p class="header__search-history-heading">Lịch sử tìm kiếm</p>
+                              <ul class="header__search-history-list">
+                                <li class="header__search-history-item">
+                                    <a href="">Kem dưỡng da</a>
+                                </li>
+                                <li class="header__search-history-item">
+                                    <a href="">Kem chống nắng</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                     <div class="header__search-select">
+                      <span class="header__search-selct_label">Trong shop</span>
+                      <i class="header__search-selct_icon fa-solid fa-angle-down"></i>
+                      <ul  class="header__search-option">
+                          <li class="header__search-option-items">
+                              <span >Trong shop</span>
+                              <i class="fa-solid fa-check"></i>
+                          </li>
+                          <li class="header__search-option-items">
+                            <span >Ngoài shop</span>
+                            <i class="fa-solid fa-check"></i>
+                        </li>
+                      </ul>
+                     </div>
+                     <button class="header__search-btn">
+                        <i class="header__search-btn_icon fa-solid fa-magnifying-glass"></i>
+                     </button>
+                    </div>
+                    <!--Cart-->
+                    <div class="header__cart">
+                        <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                        <span class="header__cart-notice">3</span>
+                        <!--No cart  header__cart--no-cart-->
+                        <div class="header__cart-list ">
+                            <img src="/assets/img/no-cart.png" class="header__cart--no-cart-img">
+                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                            <ul class="header__cart-list-item">
+                                <li class="header__cart-item">
+                                    <img src="/assets/img/imgnotify.jpg_.webp" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                            <div class="header__cart-item-wrap">
+                                            <span class="header__cart-item-price">2.000.700đ</span>
+                                            <span class="header__cart-item-mutiply">x</span>
+                                            <span class="header__cart-item-qlt">2</span>
+                                        </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-descrition">Phân loại: Bạc</span>
+                                            <span class="header__cart-item-remove">Xóa</span>
+                                        </div>
+                                    
+                                </li>
+                                <li class="header__cart-item">
+                                    <img src="/assets/img/imgnotify2.jpg_.webp" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                            <div class="header__cart-item-wrap">
+                                            <span class="header__cart-item-price">2.000.700đ</span>
+                                            <span class="header__cart-item-mutiply">x</span>
+                                            <span class="header__cart-item-qlt">2</span>
+                                        </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-descrition">Phân loại: Bạc</span>
+                                            <span class="header__cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__cart-item">
+                                    <img src="/assets/img/imgnotify3.jpg_.webp" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                            <div class="header__cart-item-wrap">
+                                            <span class="header__cart-item-price">2.000.700đ</span>
+                                            <span class="header__cart-item-mutiply">x</span>
+                                            <span class="header__cart-item-qlt">2</span>
+                                        </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-descrition">Phân loại: Bạc</span>
+                                            <span class="header__cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                        <button class="btn btn-primary header__cart-view">Xem giỏ hàng</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+               
+            </div>
+           
+        </div>
+        <div class="app__container">
+           <div class="grid">
+            <div class="grid__row app__content">
+                <div class="grid__column-2">
+                    <nav class="category">
+                        <h3 class="category__heading">
+                            <i class="category__heading-icon fa-solid fa-list"></i>
+                            Danh mục</h3>
+                        <ul class="category-list">
+                            <li class="category-item category-item--active">
+                                <a href="" class="category-item__link">Trang điểm mày</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item__link">Trang điểm môi</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item__link">Trang điểm mặt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="grid__column-10">
+                    <!--Filter-->
+                  <div class="home-filter">
+                      <span class="home-filter_label">Sắp xếp theo</span>
+                      <button class="home-filter_btn btn">Phổ biến</button>
+                      <button class="home-filter_btn btn btn-active">Mới nhất</button>
+                      <button class="home-filter_btn btn">Bán chạy</button>
+                      <div class="select-input">
+                          <span class="select-input_label">Giá</span>
+                          <i class="fa-sharp fa-solid fa-chevron-down select-input_icon"></i>
+                          <ul class="select-input_list">
+                              <li class="select-input_item">
+                                  <a href="" class="select-input_link">Giá cao đến thấp</a>
+                                </li>
+                                <li class="select-input_item">
+                                    <a href="" class="select-input_link">Giá thấp đến cao</a>
+                                  </li>
+                                
+                              
+                          </ul> 
+                      </div>
+                      <div class="home-filter_pages">
+                          <span class="home-filter_pages-num"></span>
+                          <span class="home-filter_pages-current">1</span>/14
+                          <div class="home-filter_pages-control">
+                              <a class="home-filter_pages-btn home-filter_pages-btn-disable">
+                                <i class="home-filter_pages-icon fa-solid fa-angle-left"></i>
+                              </a>
+                              <a class="home-filter_pages-btn">
+                                <i class="home-filter_pages-icon fa-solid fa-angle-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                    <!--Products-->
+                  <div class="home-product ">
+                     <div class="grid__row">
+<!--copy-->
+                         <div class="grid__column-2-4 ">
+                             <a class="home-product-item" href="#">
+                             <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/b583c62f8f3c420548cde293726897b5.jpg_400x400q75.jpg_.webp);"></div>
+                             <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                             <div class="home-product-item_price">
+                                 <span class="home-product-item_price-old">1.200.000đ</span>
+                                  <span class="home-product-item_price-current">1.600.000đ</span>
+                             </div>
+                             <div class="home-product-item-action">
+                                 <span class="home-product-item_like home-product-item_like--liked">
+                                    <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                    <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                 </span>
+                                 <div class="home-product-item-rating">
+                                    <i class="home-product-item-star fa-solid fa-star"></i>
+                                    <i class="home-product-item-star fa-solid fa-star"></i>
+                                    <i class="home-product-item-star fa-solid fa-star"></i>
+                                    <i class="home-product-item-star fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                 </div>
+                                 <span class="home-product-item-sold">
+                                     100 đã bán
+                                 </span>
+                             </div>
+                             <div class="home-product-item-original">
+                                 <span class="home-product-item-brand">Whoo</span>
+                                 <span class="home-product-item-origin">Hàn Quốc</span>
+                             </div>
+                             <div class="home-product-item-favorite">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                             </div>
+                             <div class="home-product-item-saleoff">
+                                 <span class="home-product-item-percent">10%</span>
+                                 <span class="home-product-item-label">GIẢM</span>
+                             </div>
+                             </a>
+                         </div>
+                         <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/3731e57c00fa6141107566f6569170a9.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/a800528a00b4c34778b7aca772dae0c7.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/340b0705753c31437900a74b6d16fd30.png_400x400q75.png_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/619e4c2e19b8f61f842407e216e11419.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/445c4d6e0e9d3812eff153fe5e0e7576.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/566cd312e57e17fcf4f83a463e27ca3b.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/dd731ce7995c75e6b249410077c2bfdc.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/57c93bd9e0df968706ec11c12502866c.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">1.200.000đ</span>
+                                 <span class="home-product-item_price-current">1.600.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Ohui</span>
+                                <span class="home-product-item-origin">Nhật Bản</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">34%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <a class="home-product-item" href="#">
+                            <div class="home-product-item__img" style="background-image: url(https://lzd-img-global.slatic.net/g/p/65c8cf98f25816a5add505276e878baa.jpg_400x400q75.jpg_.webp);"></div>
+                            <h4 class="home-product-item_name">Set dưỡng trắng Whoo đông y hoàng cung Gong Ying Jang Seol Radian</h4>
+                            <div class="home-product-item_price">
+                                <span class="home-product-item_price-old">2.200.040đ</span>
+                                 <span class="home-product-item_price-current">1.697.000đ</span>
+                            </div>
+                            <div class="home-product-item-action">
+                                <span class="home-product-item_like home-product-item_like--liked">
+                                   <i class="home-product-item_like-icon-empty fa-regular fa-heart"></i>
+                                   <i class="home-product-item_like-icon-fill fa-solid fa-heart"></i>
+                                </span>
+                                <div class="home-product-item-rating">
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="home-product-item-star fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="home-product-item-sold">
+                                    100 đã bán
+                                </span>
+                            </div>
+                            <div class="home-product-item-original">
+                                <span class="home-product-item-brand">Whoo</span>
+                                <span class="home-product-item-origin">Hàn Quốc</span>
+                            </div>
+                            <div class="home-product-item-favorite">
+                               <i class="fa-solid fa-check"></i>
+                               <span>Yêu thích</span>
+                            </div>
+                            <div class="home-product-item-saleoff">
+                                <span class="home-product-item-percent">10%</span>
+                                <span class="home-product-item-label">GIẢM</span>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                  </div>
+                  <ul class="pagination home-product--pagination">
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">
+                            <i class="pagination-item-icon fa-solid fa-chevron-left"></i>
+                        </a>
+                    </li>   
+                    <li class="pagination-item pagination-item--active">
+                        <a href=" " class="pagination-item-link">1 </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">2 </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">3 </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">4 </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">... </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">17 </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href=" " class="pagination-item-link">
+                            <i class="pagination-item-icon fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+           </div>
+            
+        </div>
+        <footer class="footer">
+            <div class="grid">
+               <div class="grid__row">
+               <div class="grid__column-2-4">
+                   <h3 class="footer-heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                   <ul class="footer-list">
+                        <li class="footer-list-item">
+                           <a href="" class="footer-list-link">Trung Tâm Trợ Giúp</a>
+                        </li>
+                        <li class="footer-list-item">
+                           <a href="" class="footer-list-link">Mall</a>
+                        </li>
+                        <li class="footer-list-item">
+                           <a href="" class="footer-list-link">Hướng dẫn mua hàng</a>
+                        </li>
+                   </ul>
+               </div>
+
+               <div class="grid__column-2-4">
+                <h3 class="footer-heading">Giới thiệu</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Giới thiệu</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Tuyển dụng</a>
+                     </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Điều khoản</a>
+                    </li>
+                </ul>
+               </div>
+
+               <div class="grid__column-2-4">
+                <h3 class="footer-heading">Danh mục</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Trang điểm mặt</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Trang điểm môi</a>
+                     </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Trang điểm mày</a>
+                    </li>
+                </ul>
+               </div>
+               
+               <div class="grid__column-2-4">
+                <h3 class="footer-heading">Theo dõi</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">
+                            <i class="footer-list-icon fa-brands fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class=" footer-list-link">
+                            <i class="footer-list-icon fa-brands fa-instagram"></i> Instragram
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class=" footer-list-link">
+                            <i class="footer-list-icon fa-brands fa-linkedin-in"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+               </div>
+
+               <div class="grid__column-2-4">
+                <h3 class="footer-heading">Vào cửa hàng trên ứng dụng</h3>
+                <div class="footer__download">
+                    <img src="/assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
+                    <div class="footer__download-app">
+                        <a href="" class="footer__download-app-link">
+                        <img class="footer__download-app-icon" alt="Facebook" src="/assets/img/google_play.png">
+                        </a>
+                        <a href="" class="footer__download-app-link">
+                     <img class="footer__download-app-icon" alt="App Store" src="/assets/img/app_store.png">
+                    </a>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+<!--Modal
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+         Register form
+                <div class="auth--form">
+                    <div class="auth--form__container">
+                    <div class="auth--form__header">
+                        <h3 class="auth--form__heading">Đăng ký</h3>
+                        <span class="auth--form__switch-btn">Đăng nhập</span>
+                    </div>
+                    <div class="auth--form_form">
+                        <div class="auth--form_group">
+                            <input type="text" class="auth--form_input" placeholder="Số điện thoại">
+                        </div>
+                        <div class="auth--form_group">
+                            <input type="password" class="auth--form_input" placeholder="Password">
+                        </div>
+                        <div class="auth--form_group">
+                            <input type="text" class="auth--form_input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth--form_aside">
+                        <p class="auth--form__policy">Bằng việc đăng kí, hãy đồng ý với shopee về
+                            <a class="auth--form_text-link">Điều khoản dịch vụ</a>&
+                            <a class="auth--form_text-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth--form_control">
+                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn btn--primary">Đăng ký</button>
+                    </div>
+                </div>
+                    <div class="auth--form_social">
+                        <a href="" class="btn btn--sizeS btn--with_icon facebook">
+                            <i class="social-icon fa-brands fa-facebook"></i>
+                           <span class="auth--form_social--title"> Kết nối với Facebook</span>
+                        </a>
+                        <a href="" class="btn btn--sizeS btn--with_icon">
+                            <i class="social-icon fa-brands fa-google"></i>
+                            <span class="auth--form_social--title"> Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div>
+
+           Login form
+           <div class="auth--form">
+            <div class="auth--form__container">
+            <div class="auth--form__header">
+                <h3 class="auth--form__heading">Đăng nhập</h3>
+                <span class="auth--form__switch-btn">Đăng kí</span>
+            </div>
+            <div class="auth--form_form">
+                <div class="auth--form_group">
+                    <input type="text" class="auth--form_input" placeholder="Số điện thoại">
+                </div>
+                <div class="auth--form_group">
+                    <input type="password" class="auth--form_input" placeholder="Password">
+                </div>
+               
+            </div>
+            <div class="auth--form_aside">
+              <div class="auth--form_help">
+                  <a href="" class="auth--form_help-link auth--form_help-link-forgot">Quên mật khẩu</a>
+                  <span class="auth--form_help-space"> </span>
+                    <a href="" class="auth--form_help-link">Cần trợ giúp?</a>
+                 
+                  
+              </div>
+            </div>
+            <div class="auth--form_control">
+                <button class="btn">TRỞ LẠI</button>
+                <button class="btn btn--primary">Đăng Nhập</button>
+            </div>
+        </div>
+            <div class="auth--form_social">
+                <a href="" class="btn btn--sizeS btn--with_icon facebook">
+                    <i class="social-icon fa-brands fa-facebook"></i>
+                   <span class="auth--form_social--title"> Đăng nhập với Facebook</span>
+                </a>
+                <a href="" class="btn btn--sizeS btn--with_icon">
+                    <i class="social-icon fa-brands fa-google"></i>
+                    <span class="auth--form_social--title"> Đăng nhập với Google</span>
+                </a>
+            </div>
+        </div>  
+        </div>
+    </div>-->
+</body>
+</html>
